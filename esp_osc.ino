@@ -7,11 +7,11 @@
 
 /* Put your SSID & Password */
 const char* ssid = "~XXXWifi~";  // Enter SSID here
-const char* password = "11235813";  //Enter Password here
+const char* password = "1123581321";  //Enter Password here
 
 int ambientPin = 34;
-int flexPin = 33;
-int touchPin = 35;
+int forcePin = 33;
+int touchPin = 32;
 
 /* Put IP Address details */
 IPAddress local_ip(192,168,1,1);
@@ -25,32 +25,30 @@ WiFiUDP udp;
 void setup() {
   Serial.begin(115200);
 
+  pinMode(ambientPin, INPUT);
+  pinMode(forcePin, INPUT);
+  pinMode(touchPin, INPUT);
+
   WiFi.softAP(ssid, password);
   WiFi.softAPConfig(local_ip, gateway, subnet);
   
   server.begin();
-
-  pinMode(ambientPin, INPUT);
-  pinMode(flexPin, INPUT);
-  pinMode(touchPin, INPUT);
 }
 
 void loop(){
 
-    int light_value = analogRead(ambientPin);
-    int light = light_value * 0.0976;
+      int light_value = analogRead(ambientPin);
+      int light = light_value * 0.5;
 
-    int flex_value = analogRead(flexPin);
+      int force_value = analogRead(forcePin);
 
-    int touch_value = analogRead(touchPin);
-
-    Serial.println(String(light) + " " + String(flex_value));
+      int touch_value = analogRead(touchPin);
   
-    udp.beginPacket("192.168.1.2", 3980);
-    udp.print(String(light) + " " + String(flex_value));
+    udp.beginPacket("192.168.1.2", 3890);
+    udp.print(String(light) + " " + String(force_value) + " " + String(touch_value));
     udp.endPacket();
   
   //Wait for 1 second
-  delay(3000);
+    delay(1000);
   
 }
