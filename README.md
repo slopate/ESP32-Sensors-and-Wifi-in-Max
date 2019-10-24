@@ -3,14 +3,14 @@
 This is an interactive box which control "boids" in Max/MSP via sensors connected to an ESP32.
 
 Parts list:
-ESP32
-Breadboard
-Ambient Light Sensor
-Piezoelectric Sensor
-DIY Force Resistance Sensor
-Lipo Battery 
-Breadboard
-Wires 
+ESP32,
+Breadboard,
+Ambient Light Sensor,
+Piezoelectric Sensor,
+DIY Force Resistance Sensor,
+Lipo Battery,
+Breadboard,
+Wires,
 Wooden Enclosure 
 
  On a high level, the computer is running some JavaScript code which is generating "boids" which move around a 2D plane which 
