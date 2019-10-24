@@ -8,7 +8,7 @@ Breadboard
 Ambient Light Sensor
 Piezoelectric Sensor
 DIY Force Resistance Sensor
-Lipo Battery
+Lipo Battery 
 Breadboard
 Wires 
 Wooden Enclosure 
