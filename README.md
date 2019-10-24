@@ -29,3 +29,5 @@ Wooden Enclosure
  separation force (how much the boids want to repel from each other), a cohesion force (how attracted the boids are 
  to each other), a speed limit (the maximum speed of the boids), and a point of attraction (where the boids are 
  attracted to on an XY plane).
+
+The wiring is relatively simple. The ESP32 is powered with 3.3 volts via a battery connected to a breadboard, going out to the ESP32. The breadboard also powers all of the sensors, which are connected with one end to power and the other to analog input pins on the ESP 32. I'm using analog input pins 32, 33, and 34 since these are ADC1 pins which don't conflict with the ESP32's WiFi connectiveity. ADC2 pins can cause issues when used in conjunction with WiFi.
