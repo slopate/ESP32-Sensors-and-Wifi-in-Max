@@ -13,7 +13,7 @@ Breadboard,
 Wires,
 Wooden Enclosure 
 
-To run: Download all the files in the "boids" folder. Open the main file which is "boids-lab.maxpat". The instructions for how to run the max patch are in the patch itself.
+To run: Download all the files in the "boids" folder. Open the main file which is "boids-lab.maxpat". Insert an audio file into the buffer in the bottom right corner (can be any audio file but works well with short instrument samples like bells or guitar). Turn on the animation by clicking the toggle button in the middle of the screen.
 
  On a high level, the computer is running some JavaScript code which is generating "boids" which move around a 2D plane which 
  is visible on the screen in Max. When a sound file is loaded into the buffer in Max, these boids take on specific meaning. 
