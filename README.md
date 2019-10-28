@@ -13,6 +13,8 @@ Breadboard,
 Wires,
 Wooden Enclosure 
 
+To run: Download all the files in the "boids" folder. Open the main file which is "boids-lab.maxpat". The instructions for how to run the max patch are in the patch itself.
+
  On a high level, the computer is running some JavaScript code which is generating "boids" which move around a 2D plane which 
  is visible on the screen in Max. When a sound file is loaded into the buffer in Max, these boids take on specific meaning. 
  Specifically, the X position of each boid represents the position of playback in the loaded buffer, For example, if the boid 
@@ -32,16 +34,3 @@ Wooden Enclosure
 
 The wiring is relatively simple. The ESP32 is powered with 3.3 volts via a battery connected to a breadboard, going out to the ESP32. The breadboard also powers all of the sensors, which are connected with one end to power and the other to analog input pins on the ESP 32. I'm using analog input pins 32, 33, and 34 since these are ADC1 pins which don't conflict with the ESP32's WiFi connectiveity. ADC2 pins can cause issues when used in conjunction with WiFi.
 
-Parts List:
-ESP32,
-Lipo Battery,
-Piezoelectric Sensor,
-Ambient Light Sensor,
-Homemade Force Resistance Sensor (made with packing foam, aluminum foil, and electrical tape),
-Breadboard,
-Wires,
-Wooden Enclosure
-
-Software:
-Arduino IDE,
-Max/MSP
