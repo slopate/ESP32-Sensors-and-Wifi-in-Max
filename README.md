@@ -33,15 +33,15 @@ Wooden Enclosure
 The wiring is relatively simple. The ESP32 is powered with 3.3 volts via a battery connected to a breadboard, going out to the ESP32. The breadboard also powers all of the sensors, which are connected with one end to power and the other to analog input pins on the ESP 32. I'm using analog input pins 32, 33, and 34 since these are ADC1 pins which don't conflict with the ESP32's WiFi connectiveity. ADC2 pins can cause issues when used in conjunction with WiFi.
 
 Parts List:
-ESP32
-Lipo Battery
-Piezoelectric Sensor
-Ambient Light Sensor
-Homemade Force Resistance Sensor (made with packing foam, aluminum foil, and electrical tape)
-Breadboard
-Wires
+ESP32,
+Lipo Battery,
+Piezoelectric Sensor,
+Ambient Light Sensor,
+Homemade Force Resistance Sensor (made with packing foam, aluminum foil, and electrical tape),
+Breadboard,
+Wires,
 Wooden Enclosure
 
 Software:
-Arduino IDE
+Arduino IDE,
 Max/MSP
